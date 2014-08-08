@@ -75,7 +75,10 @@ app.get("/item", function(req, res){
 	request(url, function(err, response, body){
 		if(!err){
 			var data = JSON.parse(body);
-			res.render("info.ejs", {itemInfo: data.findItemsByKeywordsResponse[0].searchResult[0].item[0] || []});
+			var response = data.findItemsByKeywordsResponse && data.findItemsByKeywordsResponse[0];
+			var searchResult = response && response.searchResult ? response.searchResult[0] : null;
+			var info = searchResult && searchResult.item ? searchResult.item[0] : null;
+			res.render("info.ejs", {itemInfo: info});
 		}
 	})
 })
