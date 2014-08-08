@@ -1,0 +1,18 @@
+<% include partials/header %>
+<body>
+
+	<p>
+		<a href="/logout">Log out here</a>
+	</p>
+	<form action="/">
+	<input type ="submit" value="Back to Search">
+	</form>
+	<h1>Your Favorites</h1>
+	<% favorites.forEach(function(favorite){%>
+		<p>
+			<img src="<%= favorite %>">
+		</p>
+	<% }) %>
+
+</body>
+</html>

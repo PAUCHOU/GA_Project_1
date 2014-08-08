@@ -1,0 +1,29 @@
+<% include partials/header %>
+<div class="col-md-4"></div><div class="col-md-4">
+	<% if(isAuthenticated) { %>
+	<p>
+		<a href="/logout">Log out here</a>
+		<a href="/saved/<%= user.id %>">See your saved results</a>
+	</p>
+	
+	
+	<% }  %>
+	<form action="/search">
+		<h1>Search ebay!</h1>
+		<h3>Enter items you want to look up</h3>
+		<input type="text" name="searchTerm" placeholder="look up..">
+		<input type="submit" value="Search">		
+	</form>
+	
+	<% if(!isAuthenticated) { %>
+	<p>
+		<a href="/signup">Sign up here</a>
+	</p>
+	<p>
+		<a href="/login">Log in here</a>
+	</p>
+	<% }  %>
+</div>	
+</div>
+</body>
+</html>

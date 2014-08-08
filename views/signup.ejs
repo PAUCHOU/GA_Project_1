@@ -1,0 +1,23 @@
+<% include partials/header %>
+<body>
+	<h1>SIGN UP</h1>
+	<form action="/create" method="post">
+		<p>Your Username:</p>
+		<input type="text" name="username" >
+		<p>Your Password:</p>
+		<input type="password" name="password">
+		<input type="submit">
+	</form>
+
+		<% if(typeof message !== 'undefined') {%>
+		<div class="alert alert-danger">
+		<%= message %>
+		</div>
+		<% }%>
+
+<p>
+	Already have an account? Log in <a href="/login">here</a>.
+</p>
+
+</body> 
+</html>

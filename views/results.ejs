@@ -1,0 +1,17 @@
+<% include partials/header %>
+<body>
+	<h1>Search Results</h1>
+	<ul>
+		<% itemList.forEach(function(item){ %>
+		<li><a href="/item?itemId=<%=item.itemId%>"><img src="<%= item.galleryURL %>"></a>
+		</li>
+		<% if(isAuthenticated) {%>
+		<form action="/save" method = "POST">
+			<input type="hidden" name="<%=item.itemId%>">
+			<input type="submit" value="Save this search result">
+		</form>
+		<% } %>
+		<% }) %>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<% include partials/header %>
+<body>
+	<h1>Item Information</h1>
+	<ul>
+	<li><img src="<%= itemInfo.galleryURL %>"></li>
+		<li>Title: <%= itemInfo.title %></li>
+		<li>Location: <%= itemInfo.location %></li>
+		<li>Zip Code: <%= itemInfo.postalCode %></li>
+		<li>URL: <%= itemInfo.viewItemURL %></li>
+		<li>Current Price: <%= itemInfo.sellingStatus[0].currentPrice[0].__value__ %></li>
+	</ul>
+</body>
+</html>
