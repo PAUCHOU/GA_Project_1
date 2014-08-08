@@ -1,5 +1,6 @@
 <% include partials/header %>
 <body>
+	<div class="col-md-4"></div><div class="col-md-4 box text">
 	<h1>Item Information</h1>
 	<ul>
 	<li><img src="<%= itemInfo.galleryURL %>"></li>
@@ -9,5 +10,6 @@
 		<li>URL: <%= itemInfo.viewItemURL %></li>
 		<li>Current Price: <%= itemInfo.sellingStatus[0].currentPrice[0].__value__ %></li>
 	</ul>
+</div>
 </body>
 </html>

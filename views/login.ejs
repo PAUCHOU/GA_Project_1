@@ -6,15 +6,16 @@
 	<title>Login</title>
 </head> -->
 <% include partials/header %>
+<div class="col-md-4"></div><div class="col-md-4 box text">
 	<form action='/login' method = "POST">
 		<h3>Login</h3>
-		<p>Username: <input type="text" name="username"></p>
-		<p>Password: <input type="password" name="password"></p>
-		<input type="submit">	
+		<p>Username: <input class="input" type="text" name="username"></p>
+		<p>Password: <input class="input" type="password" name="password"></p>
+		<input class="btn btn-primary btn-sm input" type="submit">	
 	</form>
 		
 	<p> 
 		Don't have an account? Sign up <a href="/signup">here</a> and save items for later
 	</p>
-		
+		</div>
 		

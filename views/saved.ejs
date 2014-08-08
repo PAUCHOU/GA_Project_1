@@ -1,11 +1,11 @@
 <% include partials/header %>
 <body>
-
+<div class="col-md-4"></div><div class="col-md-4 box text">
 	<p>
 		<a href="/logout">Log out here</a>
 	</p>
 	<form action="/">
-	<input type ="submit" value="Back to Search">
+	<input class="input btn btn-primary btn-sm" type ="submit" value="Back to Search">
 	</form>
 	<h1>Your Favorites</h1>
 	<% favorites.forEach(function(favorite){%>
@@ -13,6 +13,6 @@
 			<img src="<%= favorite %>">
 		</p>
 	<% }) %>
-
+</div>
 </body>
 </html>
